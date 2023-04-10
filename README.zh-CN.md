@@ -1,4 +1,8 @@
-# AI 助手桌面软件
+<div align="center">
+  <img alt="AI Assitant" width="180" height="120" src="./images/logo.png">
+  <h1>AI 助手</h1>
+  <span>中文 | <a href="./README.md">英文</a></span>
+</div>
 
 这是一个可以让 ChatGPT 运行在您的电脑上的软件。
 
