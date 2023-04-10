@@ -6,7 +6,7 @@
 
 下载:
 
-- [Win .exe](https://github.com/diorlitao/ai-assistant/releases/download/v0.0.9/ai-assistant-0.0.9.exe)
+- [Win .exe](https://github.com/diorlitao/ai-assistan/releases/download/0.0.9/ai-assistant.Setup.0.0.9.exe)
 
 目前没有提供其他系统的安装包。 您可以克隆仓库，安装依赖并打包。
 

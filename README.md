@@ -6,7 +6,7 @@ You can use Cmd+Shift+G (Mac) or Ctrl+Shift+G (Win) to quickly open it from anyw
 
 Download:
 
-- [Win .exe](https://github.com/diorlitao/ai-assistant/releases/download/v0.0.9/ai-assistant-0.0.9.exe)
+- [Win .exe](https://github.com/diorlitao/ai-assistan/releases/download/0.0.9/ai-assistant.Setup.0.0.9.exe)
 
 No system installation package currently offered. Clone the repo, npm install and run.
 
