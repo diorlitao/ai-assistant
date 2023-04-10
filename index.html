@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="index.css" />
+    <title>AI助手</title>
+  </head>
+  <body class="app">
+    <div class="page win">
+      <!-- openai官网 -->
+      <!-- <webview id="webview" src="https://chat.openai.com/chat" autosize="on" > -->
+      <!-- 国内的地址 -->
+      <webview id="webview" src="https://chat.lxtt.top/" autosize="on"> </webview>
+    </div>
+    <script>
+      const webview = document.getElementById('webview');
+      webview.addEventListener('dom-ready', function () {
+        // 隐藏元素
+        webview.insertCSS(`
+          .link-mark{
+            display:none;
+          }
+        `);
+        // 修改标题 title
+        const element = webview.executeJavaScript(`
+            document.querySelector("[class*='title']").innerHTML = "<h3>欢迎使用AI助手</h3>"
+          `);
+        console.log(document.querySelector('title').innerHTML);
+      });
+    </script>
+  </body>
+</html>

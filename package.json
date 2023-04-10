@@ -1,0 +1,86 @@
+{
+  "name": "ai-assistant",
+  "version": "0.0.9",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "electron-builder build -w",
+    "start": "electron .",
+    "publish": "electron-builder publish",
+    "auto-update": "electron-updater -p https://github.com/diorlitao/ai-assistant"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diorlitao/ai-assistant"
+  },
+  "author": "Dior Litao",
+  "license": "MIT",
+  "dependencies": {
+    "electron-context-menu": "^3.6.1",
+    "electron-log": "^4.4.8",
+    "electron-updater": "^4.3.5",
+    "i18n": "^0.15.1"
+  },
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "productName": "ai-assistant",
+    "appId": "com.diorlitao.ai_assistant",
+    "directories": {
+      "output": "dist"
+    },
+    "compression": "maximum",
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "images/icon.ico",
+      "uninstallerIcon": "images/icon.ico",
+      "installerHeaderIcon": "images/icon.ico",
+      "createDesktopShortcut": true,
+      "deleteAppDataOnUninstall": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AI 助手"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://github.com/diorlitao/ai-assistant"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "icon.icns",
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "icon": "images/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    },
+    "extraResources": [
+      {
+        "from": "./assets",
+        "to": "./assets",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  }
+}
